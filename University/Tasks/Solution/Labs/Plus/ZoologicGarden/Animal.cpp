@@ -3,17 +3,11 @@
 #pragma region Public
 Animal::Animal(char* name, double weight, Color color, AnimalType type)
 {
-	int length = std::strlen(name);
-	_name = new char[length];
-
-	for (int i = 0; i < length; i++)
-	{
-		_name[i] = name[i];
-	}
-
-	// Конец строки.
-	_name[length] = '\0';
-
+	_name = new char[std::strlen(name) + 1];
+	
+	// Копирование строки. 
+	strcpy(_name, name);
+	
 	_weight = weight;
 	_color = color;
 	_type = type;

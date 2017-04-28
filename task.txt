@@ -1,1 +1,0 @@
-Перенести проект DequeVector в Tasks/CPlusPlus (и в студии и физически).
