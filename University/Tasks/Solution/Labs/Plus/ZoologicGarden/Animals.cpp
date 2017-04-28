@@ -59,6 +59,7 @@ double Tiger::GetLengthStep()
 {
 	return 2.54;
 }
+
 void Ligr::Say()
 {
 	Lion::Say();

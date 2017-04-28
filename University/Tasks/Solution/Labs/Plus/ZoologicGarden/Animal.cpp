@@ -11,6 +11,7 @@ Animal::Animal(char* name, double weight, Color color, AnimalType type)
 		_name[i] = name[i];
 	}
 
+	// Конец строки.
 	_name[length] = '\0';
 
 	_weight = weight;

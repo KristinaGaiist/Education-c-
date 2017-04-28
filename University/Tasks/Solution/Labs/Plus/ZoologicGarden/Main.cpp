@@ -120,7 +120,7 @@ Animal* SetAnimal(Animal* animal)
 	Animal* result = Factory((AnimalType)type, name, weight);
 
 	delete[] name;
-
+	
 	return result;
 }
 void MakeSteps(Animal* animal)

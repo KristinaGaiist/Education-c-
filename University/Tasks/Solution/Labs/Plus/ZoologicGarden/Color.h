@@ -1,6 +1,6 @@
 #pragma once
 
-static const char * ColorToString[] = { "White", "Brown", "Yellow", "Green", "Orange" };
+static const char* ColorToString[] = { "White", "Brown", "Yellow", "Green", "Orange" };
 
 enum Color
 {
