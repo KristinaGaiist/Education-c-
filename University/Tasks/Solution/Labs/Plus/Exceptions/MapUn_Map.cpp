@@ -2,6 +2,7 @@
 #include <map>
 #include <unordered_map>
 #include <chrono>
+#include "Exceptions.h"
 
 using namespace std;
 
