@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Patterns
+﻿namespace Patterns
 {
     public class Universe
     {
@@ -8,6 +6,7 @@ namespace Patterns
 
         public int Fly(string Name)
         {
+            // Добавить enum Planets. Запихать фабрику в switch-case
             if (Name == "Mercury")
             {
                 return 387;

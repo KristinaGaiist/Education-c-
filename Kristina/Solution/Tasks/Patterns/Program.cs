@@ -13,6 +13,10 @@ namespace Patterns
             
             var result = _planet.Fly(name);
 
+            var sun = Sun.Instance();
+
+            Console.WriteLine($"1 == {Sun.Count}");
+
             Console.WriteLine($"Your flight will be {result} days");
 
             Console.ReadLine();

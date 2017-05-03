@@ -10,8 +10,9 @@
         {
             if (instance == null)
             {
-                return new Sun();
+                instance = new Sun();
             }
+
             return instance;
         }
 

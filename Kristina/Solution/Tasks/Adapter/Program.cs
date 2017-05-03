@@ -31,6 +31,7 @@ namespace Adapter
                     ISeason spring = new DifferentToSeason(autumn);
                     person.Wear(spring);
                 }
+
                 Console.Write("Are you mistake? Enter the temperature again: ");
             }
         }
