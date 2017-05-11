@@ -2,6 +2,7 @@
 {
     public class Sun
     {
+        //TODO: Ну ты поняла.
         private static Sun instance;
 
         protected Sun() { }

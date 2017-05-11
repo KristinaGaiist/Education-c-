@@ -4,9 +4,10 @@
     {
         private Sun _sun = Sun.Instance();
 
+        //TODO: переделать на switch case.
         public int Fly(string Name)
         {
-            // Добавить enum Planets. Запихать фабрику в switch-case
+            //TODO: Добавить enum Planets. Запихать фабрику в switch-case.
             if (Name == "Mercury")
             {
                 return 387;

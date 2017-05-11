@@ -4,6 +4,7 @@ namespace Adapter
 {
     public class Season : ISeason
     {
+        //TODO: Добавить enum.
         public void Wear (string season)
         {
             if (season == "Winter")
