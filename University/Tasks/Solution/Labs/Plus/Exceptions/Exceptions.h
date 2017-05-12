@@ -5,14 +5,25 @@
 
 using namespace std;
 
-class InvalidNumberException : public Exception
+class OutRiteLineException : public Exception
 {
 protected:
 	virtual char* Name()
 	{
-		return "InvalidNumberException";
+		return "OutRiteLineException";
 	}
 
 public:
-	InvalidNumberException() : Exception("VSE PLOHO") { }
+	OutRiteLineException() : Exception("The number bigger than dictionary.") { }
+};
+class OutLeftLineException : public Exception
+{
+protected:
+	virtual char* Name()
+	{
+		return "OutLeftLineException";
+	}
+
+public:
+	OutLeftLineException() : Exception("The number smaller than zero.") { }
 };

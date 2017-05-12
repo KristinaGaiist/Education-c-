@@ -22,7 +22,6 @@ namespace Tests.Persons
         [TestMethod]
         public void Constructor()
         {
-            // TODO: Протестить DateOfBirth.
             var result = new Person();
             result = new Person("Kristina", "Koreneva", "Viktorovna");
             result = new Person("Koreneva Kristina Viktorovna");
@@ -32,7 +31,6 @@ namespace Tests.Persons
         [TestMethod]
         public void Initialize()
         {
-            // TODO: Протестить DateOfBirth.
             var person = new Person();
             person.Initialize(_name, _lastName, _patronymic);
 

@@ -25,8 +25,6 @@ namespace Tasks.Collections.Experiments
                 Console.WriteLine($"[{element.Key}] = \"{element.Value}\"");
             }
 
-            // TODO: Использовать каждый метод из моих ответов. Со всем разобраться
-
             // Вывод по ключу.
             var kiss = dictionary[6];
             Console.WriteLine($"kis == {kiss}");

@@ -15,13 +15,18 @@ void CalculateUnorderedMap(int);
 
 int main()
 {
-	while (true)
+	for (int count = 1000; count <= 1000000; count = count * 10)
 	{
 		try
 		{
-			FindElementMap(10000);
+			cout << "count = " << count << endl;
+			FindElementMap(count);
 		}
-		catch (Wrapper<InvalidNumberException> ex)
+		catch (Wrapper<OutRiteLineException> ex)
+		{
+			ex.Print();
+		}
+		catch (Wrapper<OutLeftLineException> ex)
 		{
 			ex.Print();
 		}
@@ -31,46 +36,13 @@ int main()
 	return EXIT_SUCCESS;
 }
 
-
-void CalculateUnorderedMap(int n)
-{
-	unordered_map <int, int> myDictionary2;
-
-	auto start = std::chrono::high_resolution_clock::now();
-	for (int i = 0; i < n; i++)
-	{
-		myDictionary2.insert(pair<int, int>(i, i));
-	}
-	auto elapsed = std::chrono::high_resolution_clock::now() - start;
-	long long microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
-
-	cout << "Add three elements for " << microseconds << " microseconds." << endl << endl;
-
-	start = std::chrono::high_resolution_clock::now();
-	myDictionary2.find(1);
-	elapsed = std::chrono::high_resolution_clock::now() - start;
-	microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
-	cout << "Search first elements to value for " << microseconds << " microseconds." << endl;
-
-	start = std::chrono::high_resolution_clock::now();
-	myDictionary2.find((n / 2));
-	elapsed = std::chrono::high_resolution_clock::now() - start;
-	microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
-	cout << "Search center elements to value for " << microseconds << " microseconds." << endl;
-
-	start = std::chrono::high_resolution_clock::now();
-	myDictionary2.find(n);
-	elapsed = std::chrono::high_resolution_clock::now() - start;
-	microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
-	cout << "Search last elements to value for " << microseconds << " microseconds." << endl << endl;
-}
-void FindElementMap(int n)
+void FindElementMap(int count)
 {
 	int number;
 	map <int, int> myDictionary;
 	unordered_map <int, int> myDictionary2;
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < count; i++)
 	{
 		myDictionary.insert(pair<int, int>(i, i));
 		myDictionary2.insert(pair<int, int>(i, i));
@@ -79,16 +51,24 @@ void FindElementMap(int n)
 	cout << "Please, enter the number: ";
 	cin >> number;
 
-	if (number < n)
+	if (number > count)
 	{
-		auto start = std::chrono::high_resolution_clock::now();
-		myDictionary.find(number);
-		auto elapsed = std::chrono::high_resolution_clock::now() - start;
-		auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
-		cout << "Search" << number << " element value for " << microseconds << " microseconds." << endl << endl;
+		throw OutRiteLineException();
 	}
-	else
+	if (number < 0)
 	{
-		throw InvalidNumberException();
+		throw OutLeftLineException();
 	}
+
+	auto start = std::chrono::high_resolution_clock::now();
+	myDictionary.find(number);
+	auto elapsed = std::chrono::high_resolution_clock::now() - start;
+	auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
+	cout << "Search " << number << " element value for " << microseconds << " microseconds." << endl << endl;
+
+	start = std::chrono::high_resolution_clock::now();
+	myDictionary2.find(number);
+	elapsed = std::chrono::high_resolution_clock::now() - start;
+	microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
+	cout << "Search " << number << " element value for " << microseconds << " microseconds." << endl << endl;
 }

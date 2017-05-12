@@ -2,19 +2,18 @@
 {
     public class Sun
     {
-        //TODO: Ну ты поняла.
-        private static Sun instance;
+        private static Sun _instance;
 
         protected Sun() { }
 
         public static Sun Instance()
         {
-            if (instance == null)
+            if (_instance == null)
             {
-                instance = new Sun();
+                _instance = new Sun();
             }
 
-            return instance;
+            return _instance;
         }
 
         public int FlyTo()

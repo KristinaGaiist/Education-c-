@@ -25,10 +25,9 @@ namespace Tasks.Collections.Experiments
 
             if (0 == d)
             {
-                // TODO: ОШИБКААААААААААААААА ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! УЖЖЖЖЖАААААС
-                var sqrt = (-b) / (2 * a);
+                var x = (-b) / (2 * a);
 
-                return new[] { (double)sqrt };
+                return new[] { (double)x };
             }
             else if (d < 0)
             {
@@ -36,7 +35,6 @@ namespace Tasks.Collections.Experiments
             }
             else
             {
-                // TODO: ОШИБКААААААААААААААА ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! УЖЖЖЖЖАААААС
                 var x1 = ((-b) + Math.Sqrt(d)) / (2 * a);
                 var x2 = ((-b) - Math.Sqrt(d)) / (2 * a);
 
