@@ -1,14 +1,18 @@
 #include <stdexcept>  
 #include <limits>  
-#include <iostream>  
+#include <iostream> 
+#include "Exception.h"
 
 using namespace std;
 
-class InvalidNumber
+class InvalidNumberException : public Exception
 {
-public:
-	InvalidNumber() 
+protected:
+	virtual char* Name()
 	{
-		cout << "Invalid nubber. Enter first, center or last number." << endl;
+		return "InvalidNumberException";
 	}
+
+public:
+	InvalidNumberException() : Exception("VSE PLOHO") { }
 };

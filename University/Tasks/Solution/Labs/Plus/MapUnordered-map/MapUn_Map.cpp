@@ -47,6 +47,7 @@ void CalculateMap(int n)
 	elapsed = std::chrono::high_resolution_clock::now() - start;
 	microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
 	cout << "Search first elements to value for " << microseconds << " microseconds." << endl;
+	
 	start = std::chrono::high_resolution_clock::now();
 	myDictionary.find((n / 2));
 	elapsed = std::chrono::high_resolution_clock::now() - start;
@@ -59,7 +60,6 @@ void CalculateMap(int n)
 	elapsed = std::chrono::high_resolution_clock::now() - start;
 	microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
 	cout << "Search last elements to value for " << microseconds << " microseconds." << endl << endl;
-
 }
 
 void CalculateUnorderedMap(int n)
