@@ -4,11 +4,6 @@ class Exception
 {
 protected:
 	char* _message;
-
-	virtual char* Name()
-	{
-		return "Exception";
-	}
 public:
 	Exception()
 	{

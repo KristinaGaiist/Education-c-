@@ -7,9 +7,6 @@
 using namespace std;
 
 void FindElementMap(int);
-//void FindElementUn_Map(int);
-void CalculateMap(int);
-void CalculateUnorderedMap(int);
 
 #define throw AddInfo(__FILE__, __LINE__) +
 
@@ -36,7 +33,7 @@ int main()
 	return EXIT_SUCCESS;
 }
 
-void FindElementMap(int count)
+void FindElement(int count)
 {
 	int number;
 	map <int, int> myDictionary;
@@ -64,11 +61,11 @@ void FindElementMap(int count)
 	myDictionary.find(number);
 	auto elapsed = std::chrono::high_resolution_clock::now() - start;
 	auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
-	cout << "Search " << number << " element value for " << microseconds << " microseconds." << endl << endl;
+	cout << "Map: Search " << number << " element value for " << microseconds << " microseconds." << endl << endl;
 
 	start = std::chrono::high_resolution_clock::now();
 	myDictionary2.find(number);
 	elapsed = std::chrono::high_resolution_clock::now() - start;
 	microseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
-	cout << "Search " << number << " element value for " << microseconds << " microseconds." << endl << endl;
+	cout << "Unordered_map: Search " << number << " element value for " << microseconds << " microseconds." << endl << endl;
 }
