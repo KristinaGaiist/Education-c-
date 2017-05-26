@@ -1,0 +1,26 @@
+1. Create class YamlField:
+	fields:
+		string name;
+		string content;
+	methods: 
+		YamlField(name, content);
+		getName();
+		getContent();
+2. Create class YamlFile
+	fields:
+		list<YamlField>* fields;
+	methods:
+		YamlFile(fields);
+		AddField();
+3. Create class YamlBuilder (Parser)
+	methods: 
+		YamlBuilder();
+		YamlFile* CreateYamlFile(string yamlString);
+4. Create class YamlComparator
+	methods:
+		RESULT compare (yamlFile1, yamlFile2); , where RESULT is enum of possible results;
+
+CreateYamlFile: 
+	You need split string by '\n'. And starting with second string split each by ':', creating YamlField object and adding it to yamlfile. 
+Compare: 
+	It's easy: get from both objects YamlFields and start loop for searching same elements.
