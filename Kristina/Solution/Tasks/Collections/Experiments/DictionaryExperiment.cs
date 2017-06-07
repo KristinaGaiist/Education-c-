@@ -24,7 +24,7 @@ namespace Tasks.Collections.Experiments
             {
                 Console.WriteLine($"[{element.Key}] = \"{element.Value}\"");
             }
-
+            
             // Вывод по ключу.
             var kiss = dictionary[6];
             Console.WriteLine($"kis == {kiss}");
