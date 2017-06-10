@@ -46,18 +46,18 @@ namespace FilesSystem
 		}
 		else
 		{
-			char result[500];
-			result[0] = '\0';
+			char resultPath[500];
+			resultPath[0] = '\0';
 
-			strcat(result, path);
-			strcat(result, "/");
-			strcat(result, element->GetName());
+			strcat(resultPath, path);
+			strcat(resultPath, "/");
+			strcat(resultPath, element->GetName());
 
 			auto list = ((Directory*)element)->GetList();
 
 			for (auto iter = list.begin(); iter != list.end(); iter++)
 			{
-				Print(result, *iter);
+				Print(resultPath, *iter);
 			}
 		}
 	}
